@@ -1,0 +1,17 @@
+# python
+
+D = {0:0,1:1}
+
+
+def fib(a):
+
+	if a in D.keys():
+		return D[a] 
+	else:
+		result = fib(a-1) + fib(a-2)
+		D[a] = result	
+	return(D[a])	
+
+num = int(input('num:'))
+ans = fib(num)
+print(ans)
