@@ -1,20 +1,16 @@
-# python
-
 def prime(a,b):
-	flag = 0
-	list = [] 
+	list1 = [] 
 	for i in range(a,b+1):
 		flag = 1
-		for j in range()
-		if a%i ==0:
-			flag = 1
-			break
-		else :
-			flag = 0
-			list.append(i)
+		for j in range(2,int(a/2)):
+			if a%i ==0:
+				flag = 0
+				break
+		if flag == 1:
+				list1.append(i)
 
 a = int(input('a='))
 b = int(input('b='))
-ans = prime(a,b)
+list1 = prime(a,b)
 
-print(ans) 
+print(list1) 
