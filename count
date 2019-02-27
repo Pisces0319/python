@@ -1,0 +1,11 @@
+# python
+
+Sentence='The International Conference on Digital Information Processing, Data Mining, and Wireless Communications'
+
+Sentence = Sentence.lower()
+lists= list(Sentence)
+voc=[]
+for v in lists:
+	if v not in voc:
+		voc.append(v)
+print(len(voc))
