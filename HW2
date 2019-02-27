@@ -1,0 +1,15 @@
+test = open("b.txt","r")
+s = test.readlines()
+low = len(s)
+column = len(s[0])
+l=[]
+c=[]
+for a in range(low):
+	count = 0 
+	for b in range(column) 
+		if a == '*':
+			count = count + 1  
+
+
+
+print (count)	
