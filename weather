@@ -1,11 +1,22 @@
-# python
+import matplotlib.pyplot as pt
+import numpy as np
+pt.rcParams['font.sans-serif']=['SimHei']
 
+def disp_temp(data):
+    month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    a=[]
+    print("Area:",data[0])
+    for i in range(1,13):
+        a.append(float(data[i]))
+        print("{:>2}月均溫:{:>1f}\t".format(i, float(data[i])))
+    print("年均溫:{}".format(data[13]))
 
-#def disp_temp(data):
- #   print("area:",data[0])
-  #  for i in range(1,13):
-   #     print("{:>2}:month average{:>.1f}\t".format(i, data[i]))
-    #print("Year average:{}".format(data[13]))
+    ind= np.arange(12)
+    pt.barh(ind,a)
+    pt.yticks(ind,month)
+    pt.title(data[0])
+    pt.show()
+
 
 
 def disp_area():
@@ -25,11 +36,11 @@ climate_data=[]
 for item in raw_data:
     climate_data.append(item.rstrip('\n').split('\t'))
 
-print(climate_data)
+#print(climate_data)
 
 
 for i in range(len(climate_data)):
-	print(climate_data[i][0])
+    print(climate_data[i][0])
 print('----------------------------')
 
 while True:
